@@ -1,0 +1,1 @@
+run extractText.py
