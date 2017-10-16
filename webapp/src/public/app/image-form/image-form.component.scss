@@ -1,0 +1,31 @@
+:host {
+    display: block;
+    background: #2b3137;
+    height: 100%;
+    position: relative;
+}
+#add-btn {
+    margin-left: 15px;
+    width: 89%;
+}
+
+#main-row {
+    position: absolute;
+    width: inherit;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    color: white;
+}
+
+.full-width {
+    width: 100%;
+}
+
+#receipt-upload-input {
+    display: none;
+}
+
+#new-name-input {
+    color: black;
+}

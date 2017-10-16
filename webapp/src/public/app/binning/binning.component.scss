@@ -1,0 +1,32 @@
+:host {
+    display: block;
+    background: #dfdfdf;
+    height: 100%;
+
+    > * {
+        background: transparent;
+    }
+}
+
+.bin {
+    min-height: 100px;
+    border: #0f0f0f solid 1px;
+}
+
+ul {
+    list-style: none;
+}
+
+.chip {
+    padding: 14px 40px 12px;
+    color: #2e6da4;
+    border-radius: 5px;
+    display: inline-block;
+    border: 1.5px solid;
+    margin: 5px;
+}
+
+:host /deep/ .ui-datatable-header {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}

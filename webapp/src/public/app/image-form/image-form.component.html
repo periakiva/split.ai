@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="clearfix"></div>
+  <div class="row" id="main-row">
+    <div class="col-md-offset-2 col-md-5">
+      <h1>Split.ai</h1>
+      <h3>Upload the receipt.</h3>
+      <h3>Tell who bought what.</h3>
+      <h3>We do the math.</h3>
+    </div>
+
+    <div class="col-md-4">
+      <div id="upload-form">
+        <div *ngFor="let name of names">{{ name }}</div>
+        <div class="row">
+          <form class="col-md-12">
+            <div class="form-group">
+              <input type="text" class="form-control" id="new-name-input" placeholder="Insert new name" #newName>
+            </div>
+          </form>
+          <button id="add-btn" class="btn btn-primary col-md-12" (click)="addNewName(newName.value); newName.value = ''; newName.focus()">Add</button>
+        </div>
+        <br>
+        <div class="form-group" *ngIf="!file">
+          <label class="btn btn-primary full-width" for="receipt-upload-input" id="receipt-upload-btn">Upload Receipt</label>
+          <input type="file" class="form-control" id="receipt-upload-input" (change)="setFile($event)">
+        </div>
+        
+        <div *ngIf="file">Image Name: {{ file.name }}</div>
+        <button class="btn btn-primary full-width" (click)="uploadReceipt()">Submit</button>
+      </div>
+    </div>
+  </div> 
+</div>

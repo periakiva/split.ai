@@ -1,0 +1,28 @@
+<div class="ui-grid ui-grid-pad ui-grid-responsive">
+  <div class="ui-grid-row">
+    <div class="ui-grid-col-12" style="border-right:0 none">
+      <ul class="text-center">
+        <li *ngFor="let item of availableItems" class="chip text-center" pDraggable="items" (onDragStart)="dragStart($event,item)" 
+          (onDragEnd)="dragEnd($event)">{{ item.item }}<br>${{item.price}}</li>
+      </ul>
+    </div>
+  </div>
+  <!-- <h3 class="text-center">Warning: No backsies</h3> -->
+  <div class="ui-grid-row">
+    <div *ngFor="let name of dataService.names; index as i" class="ui-grid-col-6" pDroppable="items" (onDrop)="drop($event, i)"
+      [ngClass]="{'ui-state-highlight':draggedItem}">
+      <p-dataTable [value]="selectedItems[i]">
+        <p-header>{{name}}</p-header>
+        <p-column field="item" header="Item"></p-column>
+        <p-column field="price" header="Price"></p-column>
+        <p-footer>${{ getTotalMoney(i) }}</p-footer>
+      </p-dataTable>
+    </div>
+  </div>
+</div>
+<br>
+<button class="btn btn-primary center-block" (click)="reset()" style="color: #2e6da4;">Reset</button>
+
+<div class="center-block">
+  <a class="btn btn-primary center-block" style="width: 100px; margin-top: 5px;" href="/">Home</a>
+</div>
