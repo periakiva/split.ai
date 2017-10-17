@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 UPLOAD_FOLDER='/home/native/projects/hackRUfall2017/'
 ALLOWED_EXTENSIONS = set(['txt','pdf','png','jpg','gif'])
-app.secret_key = "super"
+app.secret_key = "YOUR KKEY"
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER 
 
 def allowed_file(filename):
