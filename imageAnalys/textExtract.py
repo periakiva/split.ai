@@ -8,7 +8,7 @@ import json
 from flask import Flask, render_template,make_response,g,request,url_for,redirect, flash,jsonify
 app = Flask(__name__)
 
-UPLOAD_FOLDER='/home/native/projects/hackRUfall2017/'
+UPLOAD_FOLDER='/your/path/to/image/'
 ALLOWED_EXTENSIONS = set(['txt','pdf','png','jpg','gif'])
 app.secret_key = "YOUR KKEY"
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER 
