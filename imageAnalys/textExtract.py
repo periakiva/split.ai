@@ -9,7 +9,7 @@ from flask import Flask, render_template,make_response,g,request,url_for,redirec
 app = Flask(__name__)
 
 UPLOAD_FOLDER='/your/path/to/image/'
-ALLOWED_EXTENSIONS = set(['txt','pdf','png','jpg','gif'])
+ALLOWED_EXTENSIONS = set(['txt','pdf','png','jpg','gif']) # types of image extensions
 app.secret_key = "YOUR KKEY"
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER 
 
