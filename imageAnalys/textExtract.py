@@ -18,7 +18,7 @@ def allowed_file(filename):
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 
-
+# Get image from path and sharpen it
 def getImage(filepath):
     image = Image.open(filepath)
     image = image.convert('L')
